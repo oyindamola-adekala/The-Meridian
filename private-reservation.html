@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Private Dining Reservation | The Meridian</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                THE MERIDIAN
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="private-dining.html">Private Dining</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Page Introduction -->
+    <section class="private-reservation-header">
+
+        <p class="private-label">PRIVATE DINING</p>
+
+        <h1>Reserve Your Private Experience</h1>
+
+        <p>
+            Tell us about your occasion and we'll prepare an elegant
+            private dining experience just for you.
+        </p>
+
+    </section>
+
+
+    <!-- Reservation Form -->
+    <section class="private-reservation-section">
+
+        <form class="private-reservation-form">
+
+            <div class="form-group">
+                <label for="private-name">Full Name</label>
+                <input
+                    type="text"
+                    id="private-name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="private-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="private-email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="private-phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="private-phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="private-date">Preferred Date</label>
+                    <input
+                        type="date"
+                        id="private-date"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="private-time">Preferred Time</label>
+                    <input
+                        type="time"
+                        id="private-time"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="private-guests">Number of Guests</label>
+
+               <select id="private-guests" required>
+    <option value="">Select number of guests</option>
+    <option value="2-6">2 - 6 Guests</option>
+    <option value="7-12">7 - 12 Guests</option>
+    <option value="13-20">13 - 20 Guests</option>
+    <option value="21-30">21 - 30 Guests</option>
+</select>
+
+<div id="room-info" class="room-info"></div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="private-room">Preferred Private Room</label>
+
+                <select id="private-room" required>
+                    <option value="">Select a room</option>
+                    <option value="room-1">Private Room 1: 2-6 guests</option>
+                    <option value="room-2">Private Room 2: 2-6 guests</option>
+                    <option value="room-3">Private Room 3: 7-12 guests</option>
+                    <option value="room-4">Private Room 4: 7-12 guests</option>
+                    <option value="room-5">Private Room 5: 13-20 guests</option>
+                    <option value="room-6">Private Room 6: 13-20 guests</option>
+                    <option value="room-7">Private Room 7: 21-30 guests</option>
+                    <option value="room-8">Private Room 8: 21-30 guests</option>
+                    <option value="room-9">Private Room 9: Ball Room 1</option>
+                    <option value="room-10">Private Room 10: Ball Room 2</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="private-occasion">Occasion</label>
+
+                <select id="private-occasion">
+                    <option value="">Select an occasion</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="business">Business Dinner</option>
+                    <option value="celebration">Celebration</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="private-message">
+                    Additional Requests
+                </label>
+
+                <textarea
+                    id="private-message"
+                    placeholder="Tell us about any special requests..."
+                ></textarea>
+            </div>
+
+
+            <!-- Booking Fee -->
+            <div class="private-booking-fee">
+
+    <h3>Private Dining Booking Fee</h3>
+
+    <p id="booking-fee">
+        Select the number of guests to see your reservation fee.
+    </p>
+
+</div>
+
+            <button type="submit" class="private-reserve-button">
+                Continue to Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 The Meridian. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1925 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+color: #1d1d1d;
+background: #f8f7f4 url("../images/Daytime Outside View.jpeg") center center / cover no-repeat fixed;
+line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    min-height: 82px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #e8e6e1;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #1d1d1d;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.navbar nav a {
+    position: relative;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #333333;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #1d1d1d;
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+.navbar nav a:hover {
+    color: #000000;
+}
+
+.nav-button {
+    padding: 11px 20px;
+    border: 1px solid #1d1d1d;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #1d1d1d;
+    color: #ffffff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    background: transparent
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 560px;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 14px 24px;
+    font-size: 14px;
+}
+
+.primary-button {
+    background: #1d1d1d;
+    color: #ffffff;
+}
+
+.secondary-button {
+    border: 1px solid #1d1d1d;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    padding: 120px 7%;
+    align-items: center;
+}
+
+.welcome-image {
+    height: 550px;
+    background: #ddd9d0;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-content {
+    max-width: 520px;
+}
+
+.welcome h2,
+.signature h2,
+.private-dining h2 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.welcome-content p:not(.section-label) {
+    margin-bottom: 20px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SIGNATURE DINING
+========================= */
+
+.signature {
+    padding: 110px 7%;
+    background: #ffffff;
+}
+
+.signature-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.signature-heading > p:last-child {
+    max-width: 550px;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.dish-card {
+    background: #f5f3ee;
+}
+
+.dish-image {
+    height: 350px;
+    background: #ddd9d0;
+}
+
+.dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 25px;
+}
+
+.dish-info h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.dish-info p {
+    font-size: 14px;
+}
+
+.menu-link {
+    display: inline-block;
+    margin-top: 45px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   PRIVATE DINING
+========================= */
+
+.private-dining {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    background: #1d1d1d;
+    color: #ffffff;
+}
+
+.private-content {
+    padding: 100px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.private-content h2 {
+    margin-bottom: 25px;
+}
+
+.private-content p:not(.section-label) {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.private-image {
+    min-height: 500px;
+}
+
+.private-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.light-button {
+    display: inline-block;
+    width: fit-content;
+    padding: 14px 24px;
+    border: 1px solid #ffffff;
+}
+
+
+/* =========================
+   RESERVATION CTA
+========================= */
+
+.reservation-cta {
+    padding: 130px 7%;
+    text-align: center;
+    background: #e9e6df;
+}
+
+.reservation-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.reservation-content h2 {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.reservation-content p:not(.section-label) {
+    max-width: 520px;
+    margin: 0 auto 35px;
+}
+
+.reservation-content .primary-button {
+    display: inline-block;
+}
+
+
+/* =========================
+   GUEST REVIEWS
+========================= */
+
+.reviews {
+    padding: 110px 7%;
+    background: #ffffff;
+}
+
+.reviews-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.reviews-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review-card {
+    padding: 40px 30px;
+    background: #f5f3ee;
+    text-align: center;
+}
+
+.review-text {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.review-author {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #1d1d1d;
+    color: #ffffff;
+    padding: 80px 7% 25px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    padding-bottom: 70px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-brand h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    color: #cfcfcf;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444444;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #999999;
+    font-size: 12px;
+}
+
+
+/* =========================
+   MENU HERO
+========================= */
+
+.menu-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 7%;
+    background: #e9e6df;
+    text-align: center;
+}
+
+.menu-hero-content {
+    max-width: 700px;
+}
+
+.menu-hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(52px, 7vw, 80px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.menu-hero-content > p:last-child {
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+
+/* =========================
+   MENU INTRO
+========================= */
+
+.menu-intro {
+    padding: 110px 7%;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.menu-intro h2 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.menu-intro > p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   MENU SECTIONS
+========================= */
+
+.menu-section {
+    padding: 110px 7%;
+}
+
+.menu-section-light {
+    background: #ffffff;
+}
+
+.menu-section-dark {
+    background: #1d1d1d;
+    color: #ffffff;
+}
+
+.menu-section-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.menu-section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.menu-section-heading > p:last-child {
+    max-width: 550px;
+}
+
+
+/* =========================
+   MENU ITEMS
+========================= */
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-item {
+    background: #f5f3ee;
+}
+
+.menu-section-dark .menu-item {
+    background: #292929;
+}
+
+.menu-item-image {
+    height: 330px;
+    background: #ddd9d0;
+}
+
+.menu-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-item-info {
+    padding: 25px;
+}
+
+.menu-item-info h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.menu-item-info p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.menu-item-info span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   DRINKS
+========================= */
+
+.drinks-list {
+    max-width: 850px;
+}
+
+.drink-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid #d8d5ce;
+}
+
+.drink-item h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.drink-item p {
+    font-size: 14px;
+}
+
+.drink-item span {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .welcome,
+    .private-dining {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        padding: 80px 20px;
+        gap: 40px;
+    }
+
+    .welcome-image {
+        height: 400px;
+    }
+
+    .signature {
+        padding: 80px 20px;
+    }
+
+    .dish-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .private-content {
+        padding: 80px 20px;
+    }
+
+    .reservation-cta {
+        padding: 90px 20px;
+    }
+
+    .reservation-content h2 {
+        font-size: 44px;
+    }
+
+    .reviews {
+        padding: 80px 20px;
+    }
+
+    .reviews-heading h2 {
+        font-size: 40px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .review-card {
+        padding: 35px 25px;
+    }
+
+    .footer {
+        padding: 65px 20px 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding-bottom: 50px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-hero {
+        min-height: 50vh;
+        padding: 70px 20px;
+    }
+
+    .menu-hero h1 {
+        font-size: 52px;
+    }
+
+    .menu-intro {
+        padding: 80px 20px;
+    }
+
+    .menu-intro h2 {
+        font-size: 40px;
+    }
+
+    .menu-section {
+        padding: 80px 20px;
+    }
+
+    .menu-section-heading h2 {
+        font-size: 40px;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-image {
+        height: 300px;
+    }
+
+    .drink-item {
+        align-items: flex-start;
+    }
+}
+
+/* =========================
+   RESERVATIONS PAGE
+========================= */
+
+.reservation-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 8%;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+        url("../images/reservation-bg.jpg") center/cover no-repeat;
+}
+
+.reservation-hero-content {
+    max-width: 650px;
+    color: #ffffff;
+}
+
+.reservation-hero h1 {
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.95;
+    font-weight: 400;
+    margin: 15px 0 30px;
+}
+
+.reservation-hero p:not(.section-label) {
+    max-width: 500px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RESERVATION SECTION
+========================= */
+
+.reservation-section {
+    padding: 100px 8%;
+    background: #f8f7f3;
+}
+
+.reservation-heading {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.reservation-heading h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    margin: 15px 0 20px;
+}
+
+.reservation-heading > p:last-child {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.reservation-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid #d5d3cc;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #222;
+}
+
+
+/* =========================
+   BOOKING NOTE
+========================= */
+
+.booking-note {
+    grid-column: 1 / -1;
+    padding: 25px 30px;
+    background: #eeeDE7;
+    border-left: 3px solid #222;
+}
+
+.booking-note h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+}
+
+.booking-note p {
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   RESERVATION BUTTON
+========================= */
+
+.reservation-button {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 17px 35px;
+    border: none;
+    background: #111;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.reservation-button:hover {
+    background: #333;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .reservation-hero {
+        min-height: 60vh;
+        padding: 100px 6%;
+    }
+
+    .reservation-section {
+        padding: 70px 6%;
+    }
+
+    .reservation-form {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .form-group-full,
+    .booking-note,
+    .reservation-button {
+        grid-column: auto;
+    }
+
+    .reservation-button {
+        width: 100%;
+    }
+
+}
+
+/* =========================
+   RESERVATION CONFIRMATION
+========================= */
+
+.reservation-confirmation {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.confirmation-box {
+    background: #ffffff;
+    padding: 70px 60px;
+    text-align: center;
+    border: 1px solid #e2e0da;
+}
+
+.confirmation-box h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    margin: 15px 0 20px;
+}
+
+.confirmation-box > p:not(.section-label):not(.confirmation-note) {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+.confirmation-details {
+    max-width: 650px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.confirmation-details div {
+    padding: 22px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.confirmation-details span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.confirmation-details strong {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.confirmation-note {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.confirmation-button {
+    padding: 15px 28px;
+    background: #1d1d1d;
+    color: #ffffff;
+    border: none;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.confirmation-button:hover {
+    background: #333333;
+}
+
+
+/* =========================
+   CONFIRMATION MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .confirmation-box {
+        padding: 50px 25px;
+    }
+
+    .confirmation-details {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   REVIEWS PAGE
+========================= */
+
+.reviews-hero {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    padding: 110px 8%;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+        url("../images/reviews-bg.jpg") center/cover no-repeat;
+}
+
+.reviews-hero-content {
+    max-width: 700px;
+    color: #ffffff;
+}
+
+.reviews-hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.95;
+    font-weight: 400;
+    margin: 15px 0 30px;
+}
+
+.reviews-hero-content > p:last-child {
+    max-width: 520px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   REVIEWS INTRO
+========================= */
+
+.reviews-intro {
+    padding: 110px 8%;
+    max-width: 850px;
+}
+
+.reviews-intro h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 15px 0 25px;
+}
+
+.reviews-intro > p:last-child {
+    max-width: 600px;
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   GUEST REVIEWS
+========================= */
+
+.guest-reviews {
+    padding: 0 8% 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.guest-reviews .review-card {
+    padding: 45px 35px;
+    background: #ffffff;
+    border: 1px solid #e2e0da;
+    text-align: center;
+}
+
+.review-stars {
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.guest-reviews .review-text {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.guest-reviews .review-author {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.review-location {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =========================
+   REVIEW CTA
+========================= */
+
+.review-cta {
+    padding: 110px 8%;
+    background: #1d1d1d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.review-cta > div {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.review-cta h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 400;
+    margin: 15px 0 20px;
+}
+
+.review-cta p:not(.section-label) {
+    color: #cfcfcf;
+    margin-bottom: 30px;
+}
+
+.review-button {
+    padding: 15px 30px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.review-button:hover {
+    background: #ffffff;
+    color: #1d1d1d;
+}
+
+
+/* =========================
+   REVIEWS MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .reviews-hero {
+        min-height: 60vh;
+        padding: 90px 6%;
+    }
+
+    .reviews-intro {
+        padding: 80px 6%;
+    }
+
+    .guest-reviews {
+        padding: 0 6% 80px;
+        grid-template-columns: 1fr;
+    }
+
+    .review-cta {
+        padding: 80px 6%;
+    }
+
+}
+
+/* =========================
+   REVIEW FORM
+========================= */
+
+.review-form {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.review-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #1d3557;
+}
+
+.review-form p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form groups */
+
+.review-form .form-group {
+    margin-bottom: 20px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs */
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.review-form input:focus,
+.review-form textarea:focus,
+.review-form select:focus {
+    border-color: #1d3557;
+    box-shadow: 0 0 0 3px rgba(29, 53, 87, 0.08);
+}
+
+/* Text area */
+
+.review-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Submit button */
+
+.review-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #1d3557;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.review-form button:hover {
+    background: #14263f;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .review-form {
+        margin: 30px 15px;
+        padding: 25px 20px;
+    }
+
+    .review-form h2 {
+        font-size: 24px;
+    }
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../images/about-restaurant.jpg") center/cover no-repeat;
+    color: white;
+}
+
+.about-hero-content {
+    max-width: 750px;
+}
+
+.about-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about-hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.about-hero p:last-child {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Our Story */
+
+.about-story {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-story-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.about-story-text h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-story-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Philosophy */
+
+.about-philosophy {
+    text-align: center;
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 70px 30px;
+}
+
+.about-philosophy h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.about-philosophy p:last-child {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        min-height: 60vh;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin: 60px auto;
+    }
+
+    .about-story-image img {
+        height: 350px;
+    }
+
+    .about-story-text h2 {
+        font-size: 30px;
+    }
+
+    .about-philosophy {
+        margin: 60px auto;
+    }
+
+    .about-philosophy h2 {
+        font-size: 30px;
+    }
+}
+
+/* =========================
+   ABOUT PAGE NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1d3557;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #1d3557;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    background: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 80px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+
+/* Mobile Navbar */
+
+@media (max-width: 768px) {
+
+    header nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* =========================
+   PRIVATE DINING PAGE
+========================= */
+
+.private-hero {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: #1d3557;
+    color: white;
+}
+
+.private-hero-content {
+    max-width: 750px;
+}
+
+.private-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.private-hero h1 {
+    font-size: 50px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.private-hero p:last-child {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Introduction */
+
+.private-intro {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.private-intro h2 {
+    font-size: 38px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.private-intro p:last-child {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* Private Rooms */
+
+.private-rooms {
+    background: #f7f7f7;
+    padding: 90px 30px;
+}
+
+.private-room-text {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.private-room-text h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.private-room-text > p {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.room-details {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.room-details h3 {
+    font-size: 30px;
+    color: #1d3557;
+    margin-bottom: 5px;
+}
+
+.room-details p {
+    color: #666;
+    margin: 0;
+}
+
+
+/* Occasions */
+
+.private-occasions {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.private-occasions h2 {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.occasion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.occasion-card {
+    padding: 35px 25px;
+    border: 1px solid #e5e5e5;
+    background: white;
+    border-radius: 5px;
+}
+
+.occasion-card h3 {
+    color: #1d3557;
+    margin-bottom: 15px;
+}
+
+.occasion-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* Call To Action */
+
+.private-cta {
+    text-align: center;
+    background: #1d3557;
+    color: white;
+    padding: 80px 25px;
+}
+
+.private-cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.private-cta p {
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.private-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: white;
+    color: #1d3557;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.private-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .private-hero h1 {
+        font-size: 36px;
+    }
+
+    .private-intro h2,
+    .private-room-text h2,
+    .private-occasions h2 {
+        font-size: 30px;
+    }
+
+    .room-details {
+        gap: 35px;
+    }
+
+    .occasion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .private-cta h2 {
+        font-size: 30px;
+    }
+}
+
+/* =========================
+   PRIVATE RESERVATION
+========================= */
+
+.private-reservation-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 80px auto 50px;
+    padding: 0 25px;
+}
+
+.private-reservation-header h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.private-reservation-header p:last-child {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* Reservation form */
+
+.private-reservation-section {
+    max-width: 850px;
+    margin: 0 auto 100px;
+    padding: 0 25px;
+}
+
+.private-reservation-form {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.private-reservation-form .form-group {
+    margin-bottom: 22px;
+}
+
+.private-reservation-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.private-reservation-form input,
+.private-reservation-form select,
+.private-reservation-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.private-reservation-form input:focus,
+.private-reservation-form select:focus,
+.private-reservation-form textarea:focus {
+    border-color: #1d3557;
+    box-shadow: 0 0 0 3px rgba(29, 53, 87, 0.08);
+}
+
+.private-reservation-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* Two fields on one row */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* Room information */
+
+.room-info {
+    margin-top: 12px;
+    padding: 18px 20px;
+    background: #f7f8fa;
+    border-left: 3px solid #1d3557;
+    border-radius: 4px;
+    color: #444;
+    line-height: 1.7;
+}
+
+
+/* Booking fee card */
+
+.private-booking-fee {
+    margin: 30px 0;
+    padding: 25px;
+    background: #f7f8fa;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.private-booking-fee h3 {
+    margin-bottom: 10px;
+    color: #1d3557;
+    font-size: 20px;
+}
+
+.private-booking-fee p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.private-booking-fee strong {
+    color: #1d3557;
+    font-size: 18px;
+}
+
+
+/* Reserve button */
+
+.private-reserve-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #1d3557;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.private-reserve-button:hover {
+    background: #14263f;
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .private-reservation-header h1 {
+        font-size: 34px;
+    }
+
+    .private-reservation-form {
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
